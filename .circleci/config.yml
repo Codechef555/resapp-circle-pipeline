@@ -14,7 +14,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: python -m unittest discover tests/
+          command: python -m unittest test.py
 
 workflows:
   version: 2
