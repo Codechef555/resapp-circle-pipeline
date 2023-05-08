@@ -22,7 +22,7 @@ def dataConnectivity():
 
 # define a function to autofill the form fields
 def autofill(username_box, email_box, resume_box, user_data):
-    username_value = username_box.text_input("Username", value=user_data["name"])
+    username_value = username_box.text_input("User name", value=user_data["name"])
     email_value = email_box.text_input("Email", value=user_data["emailId"])
     resume_value = resume_box.text_area("Resume", value=user_data["description"], height=200)
     return username_value, email_value, resume_value
