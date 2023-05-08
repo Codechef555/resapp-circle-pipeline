@@ -23,10 +23,10 @@ def dataConnectivity():
 
 # define a function to autofill the form fields
 def autofill(username_box, email_box, resume_box, user_data):
-    username_box.text_input("Username", value=user_data["name"])
-    email_box.text_input("Email", value=user_data["emailId"])
-    resume_box.text_area("Resume", value=user_data["description"], height=200)
-    return username_value, email_value, resume_value 
+    username_value = username_box.text_input("Username", value=user_data["name"])
+    email_value = email_box.text_input("Email", value=user_data["emailId"])
+    resume_value = resume_box.text_area("Resume", value=user_data["description"], height=200)
+    return username_value, email_value, resume_value
 
 def extract_cgpa(text):
     cgpa_regex = r'CGPA\s*[:|;]?\s*(\d+(?:\.\d+)?)'
@@ -70,7 +70,7 @@ def main():
     username_box = st.empty()
     email_box = st.empty()
     resume_box = st.empty()
-    autofill(username_box, email_box, resume_box, user_data)
+    username_value, email_value, resume_value = autofill(username_box, email_box, resume_box, user_data)
 
     ####JD dropbox###
 
