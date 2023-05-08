@@ -61,7 +61,7 @@ def main():
 
     ####Side Bar####
 
-    st.title("Job Application Screening App")
+    st.title("Job Application Screening App !!")
     # create the sidebar with the list of usernames
     st.sidebar.title("Candidates List")
     user_selection = st.sidebar.radio("Select a candidate:", [user["name"] for user in users])
