@@ -131,13 +131,15 @@ def main():
                     #st.write(f"Neural Network Model Loss: {loss:.3f}, Accuracy: {accuracy:.3f}")
                     predictions = model.predict(X_test)
                     score = predictions[1] * 100
+                    st.write("Sequential score")
                     st.write(score)
                     vectorizer = CountVectorizer()
                     job_description_vector = vectorizer.fit_transform([job_description])
                     clean_text_vector = vectorizer.transform([resume])
                     similarity = cosine_similarity(job_description_vector, clean_text_vector)
+                    st.write("Cosine similarity score")
                     st.write(similarity)
-                    if score > 50 and similarity[0][0] >= 0.5:
+                    if score > 70 and similarity[0][0] >= 0.6:
                         st.success("The candidate is qualified.")
                         st.write(f"{user_data['name']}, resume matches the job description!")
                     else:
