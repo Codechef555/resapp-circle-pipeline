@@ -61,7 +61,7 @@ def main():
 
     ####Side Bar####
 
-    st.title("Job Application Screening App !")
+    st.title("Job Application Screening App")
     # create the sidebar with the list of usernames
     st.sidebar.title("Candidates List")
     user_selection = st.sidebar.radio("Select a candidate:", [user["name"] for user in users])
@@ -140,10 +140,10 @@ def main():
                     st.write("Cosine similarity score")
                     st.write(similarity)
                     if score > 70 and similarity[0][0] >= 0.6:
-                        st.success("The candidate is qualified.")
+                        st.success("The candidate is qualified")
                         st.write(f"{user_data['name']}, resume matches the job description!")
                     else:
-                        st.warning("The candidate is not qualified.")
+                        st.warning("The candidate is not qualified")
                         st.write(f"Sorry {user_data['name']}, resume does not match the job description.")
                 else:
                     st.warning("The candidate has LESS CGPA so the candidate is not eligible for the role")
