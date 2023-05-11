@@ -61,7 +61,7 @@ def main():
 
     ####Side Bar####
 
-    st.title("Job Application Screening App !!")
+    st.title("Job Application Screening App !")
     # create the sidebar with the list of usernames
     st.sidebar.title("Candidates List")
     user_selection = st.sidebar.radio("Select a candidate:", [user["name"] for user in users])
@@ -87,7 +87,7 @@ def main():
     resume = user_data["description"]
 
     ####Eligibility Check####
-    if st.button("Check Eligibility"):
+    if st.button("Check Eligibility score"):
         resume_cgpa = extract_cgpa(resume)
         job_description_cgpa = extract_cgpa(job_description)
         resume_degree = extract_degree(resume)
